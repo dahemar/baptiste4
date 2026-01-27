@@ -1,0 +1,48 @@
+---
+import '../styles/audiovisual.css';
+
+const placeholderItems = [
+  { id: 'av-1', title: 'audiovisual work 1', credits: 'credits — lorem ipsum dolor sit amet, consectetur adipiscing elit.', year: '2020' },
+  { id: 'av-2', title: 'audiovisual work 2', credits: 'credits — sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', year: '2021' },
+  { id: 'av-3', title: 'audiovisual work 3', credits: 'credits — ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.', year: '2023' }
+];
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baptiste Le Chapelain</title>
+  <link rel="stylesheet" href="/theatre-works.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="nav-container">
+      <div class="nav-links">
+        <a href="/theatre-works" class="nav-link home-link" aria-label="theatre"><span class="desktop-label">music for theatre</span><span class="mobile-label">theatre</span></a>
+        <a href="/music" class="nav-link">music</a>
+        <a href="/audiovisual" class="nav-link active">audiovisual</a>
+        <a href="/contact" class="nav-link">contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="av-page">
+    <div class="av-list">
+      {placeholderItems.map(item => (
+        <div key={item.id} class="av-item">
+          <div class="av-media">
+            <div class="av-placeholder" aria-label="placeholder" />
+          </div>
+          <div class="av-meta">
+            <div class="av-name">{item.title}</div>
+            <div class="av-credits">{item.credits}</div>
+            <div class="av-year">{item.year}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</body>
+</html>
