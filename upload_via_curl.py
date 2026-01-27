@@ -69,7 +69,10 @@ for dirpath,dirnames,filenames in os.walk(ROOT):
         tmp='/tmp/payload.json'
         with open(tmp,'w') as t:
             json.dump(payload,t)
-        url=f'https://api.github.com/repos/{REPO}/contents/{rel}'
+        # build URL-encoded path preserving directory separators
+        parts=rel.split(os.sep)
+        path_for_url='/'.join(quote(p, safe='') for p in parts)
+        url=f'https://api.github.com/repos/{REPO}/contents/{path_for_url}'
         curl_cmd=['curl','-s','-X','PUT']+HEADERS+['-d',f'@{tmp}',url]
         try:
             q=subprocess.run(curl_cmd, capture_output=True, text=True, timeout=120)
