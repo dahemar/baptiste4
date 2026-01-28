@@ -131,7 +131,7 @@
     "scenes": [
       {
         "id": "3-scene-0",
-        "videoUrl": "https://github.com/dahemar/baptiste2/releases/download/media-assets-2026-01-28/1.Grace.chien.kora.mp4",
+        "videoUrl": "https://github.com/dahemar/video-assets/releases/download/media-assets-2026-01-28/1.Grace.chien.kora.mp4",
         "thumbnail": "/assets/images/thumbnails/1.Grace chien kora.jpg"
       },
       {
@@ -181,7 +181,7 @@
       },
       {
         "id": "3-scene-10",
-        "videoUrl": "https://github.com/dahemar/apulati/releases/download/media-assets-2026-01-28/11.Le.Coton.compressed.mp4",
+        "videoUrl": "https://github.com/dahemar/video-assets/releases/download/media-assets-2026-01-28/11.Le.Coton.mp4",
         "thumbnail": "/assets/images/thumbnails/11.Le Coton.jpg"
       }
     ],
@@ -257,7 +257,7 @@
       },
       {
         "id": "5-scene-1",
-        "videoUrl": "/assets/videos/2.Organ Vinyl.mp4",
+        "videoUrl": "https://github.com/dahemar/video-assets/releases/download/media-assets-2026-01-28/2.Organ.Vinyl.mp4",
         "thumbnail": "/assets/images/thumbnails/2.Organ Vinyl.jpg"
       },
       {
@@ -272,7 +272,7 @@
       },
       {
         "id": "5-scene-4",
-        "videoUrl": "/assets/videos/5.Orfeu Granular.mp4",
+        "videoUrl": "https://github.com/dahemar/video-assets/releases/download/media-assets-2026-01-28/5.Orfeu.Granular.mp4",
         "thumbnail": "/assets/images/thumbnails/5.Orfeu Granular.jpg"
       },
       {
