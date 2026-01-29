@@ -1,20 +1,14 @@
 {
-  "name": "v2",
+  "name": "apulati-root",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=20.0.0 <23.0.0"
+  },
   "scripts": {
-    {
-      "name": "apulati-root",
-      "version": "1.0.0",
-      "private": true,
-      "engines": {
-        "node": ">=20.0.0 <23.0.0"
-      },
+    "build": "cd astro-app && npm ci && npm run build",
+    "dev": "cd astro-app && npm ci && npm run dev",
+    "preview": "cd astro-app && npm ci && npm run preview"
+  }
+}
       "scripts": {
-        "build": "cd astro-app && npm ci && npm run build",
-        "dev": "cd astro-app && npm ci && npm run dev",
-        "preview": "cd astro-app && npm ci && npm run preview"
-      }
-    }
-    "react-dom": "^19.1.0",
