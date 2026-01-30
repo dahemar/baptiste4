@@ -319,3 +319,43 @@ class GoogleSheetsManager {
 
 const sheetsManager = new GoogleSheetsManager();
 export default sheetsManager;
+
+// Compatibility named exports expected by other modules
+export async function loadFromCache() {
+  const cachePath = path.join(process.cwd(), '.cache', 'theatre-works.json');
+  try {
+    const raw = await fs.readFile(cachePath, 'utf8');
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) return parsed;
+    if (parsed && Array.isArray(parsed.works)) return parsed.works;
+    return parsed;
+  } catch {
+    return null;
+  }
+}
+
+export async function saveToCache(data: unknown) {
+  const cachePath = path.join(process.cwd(), '.cache', 'theatre-works.json');
+  await fs.mkdir(path.dirname(cachePath), { recursive: true });
+  await fs.writeFile(cachePath, JSON.stringify(data, null, 2), 'utf8');
+}
+
+export async function fetchFromGoogleSheets() {
+  // Delegate to the class implementation
+  try {
+    return await sheetsManager.loadTheatreWorksData();
+  } catch (e) {
+    return [];
+  }
+}
+
+export function clearMemoryCache() {
+  // no-op for this implementation; kept for compatibility
+  try {
+    // if sheetsManager had an in-memory cache, we could clear it here
+    // access via any to avoid TypeScript private member checks
+    if ((sheetsManager as any)?.cache) (sheetsManager as any).cache = new Map();
+  } catch (e) {
+    // ignore
+  }
+}
