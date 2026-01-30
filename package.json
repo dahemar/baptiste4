@@ -1,7 +1,7 @@
 {
   "name": "apulati-root",
-  "version": "1.0.0",
   "private": true,
+  "version": "1.0.0",
   "engines": {
     "node": ">=20.0.0 <23.0.0"
   },
@@ -11,3 +11,4 @@
     "preview": "cd astro-app && npm ci && npm run preview"
   }
 }
+
